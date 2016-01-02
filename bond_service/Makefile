@@ -3,3 +3,6 @@ compile: build
 
 build:
 	protoc -I=. --cpp_out=. *.proto
+
+clean:
+	rm -rf BondService *.pb.h *.pb.cc
