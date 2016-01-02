@@ -1,4 +1,6 @@
 #include <cmath>
+#include "ServiceBondInput.pb.h"
+#include "ServiceBondOutput.pb.h"
 
 class Bond {
   public:
@@ -58,9 +60,44 @@ class BondPricerService final: public IBondPricerService {
     }
 };
 
+
 class BondPricerServiceProxy final: public IBondPricerService {
     BondPrice reprice(Bond bond) {
-      std::cout << "Computing price for bond" << std::endl;
-      return BondPrice();
+
+      // serializing request
+      ServiceBondInput in;
+      in.set_name(bond.name);
+      in.set_coupon(bond.coupon);
+      in.set_payments(bond.payments);
+      in.set_interestrate(bond.interestRate);
+
+      // send
+
+      // deserializing response
+      ServiceBondOutput out;
+      return BondPrice(out.price());
+    }
+};
+
+class BondPriceRemoteService  {
+  private:
+    BondPricerService service;
+
+  public:
+    ServiceBondOutput priceRequest(ServiceBondInput in) {
+      // deserialize
+      Bond bond;
+      bond.name = in.name();
+      bond.coupon = in.coupon();
+      bond.payments = in.payments();
+      bond.interestRate = in.interestrate();
+
+      // call real serivce
+      BondPrice bondPrice = service.reprice(bond);
+
+      // serialize response
+      ServiceBondOutput out;
+      out.set_price(bondPrice.price);
+      return out;
     }
 };

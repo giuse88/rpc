@@ -1,3 +1,3 @@
-message BondServiceOutput {
+message ServiceBondOutput {
   required float price = 1;
 }

@@ -31,18 +31,18 @@ void  protobuf_AddDesc_ServiceBondOutput_2eproto();
 void protobuf_AssignDesc_ServiceBondOutput_2eproto();
 void protobuf_ShutdownFile_ServiceBondOutput_2eproto();
 
-class BondServiceOutput;
+class ServiceBondOutput;
 
 // ===================================================================
 
-class BondServiceOutput : public ::google::protobuf::Message {
+class ServiceBondOutput : public ::google::protobuf::Message {
  public:
-  BondServiceOutput();
-  virtual ~BondServiceOutput();
+  ServiceBondOutput();
+  virtual ~ServiceBondOutput();
 
-  BondServiceOutput(const BondServiceOutput& from);
+  ServiceBondOutput(const ServiceBondOutput& from);
 
-  inline BondServiceOutput& operator=(const BondServiceOutput& from) {
+  inline ServiceBondOutput& operator=(const ServiceBondOutput& from) {
     CopyFrom(from);
     return *this;
   }
@@ -56,17 +56,17 @@ class BondServiceOutput : public ::google::protobuf::Message {
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const BondServiceOutput& default_instance();
+  static const ServiceBondOutput& default_instance();
 
-  void Swap(BondServiceOutput* other);
+  void Swap(ServiceBondOutput* other);
 
   // implements Message ----------------------------------------------
 
-  BondServiceOutput* New() const;
+  ServiceBondOutput* New() const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const BondServiceOutput& from);
-  void MergeFrom(const BondServiceOutput& from);
+  void CopyFrom(const ServiceBondOutput& from);
+  void MergeFrom(const ServiceBondOutput& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -95,7 +95,7 @@ class BondServiceOutput : public ::google::protobuf::Message {
   inline float price() const;
   inline void set_price(float value);
 
-  // @@protoc_insertion_point(class_scope:BondServiceOutput)
+  // @@protoc_insertion_point(class_scope:ServiceBondOutput)
  private:
   inline void set_has_price();
   inline void clear_has_price();
@@ -110,37 +110,37 @@ class BondServiceOutput : public ::google::protobuf::Message {
   friend void protobuf_ShutdownFile_ServiceBondOutput_2eproto();
 
   void InitAsDefaultInstance();
-  static BondServiceOutput* default_instance_;
+  static ServiceBondOutput* default_instance_;
 };
 // ===================================================================
 
 
 // ===================================================================
 
-// BondServiceOutput
+// ServiceBondOutput
 
 // required float price = 1;
-inline bool BondServiceOutput::has_price() const {
+inline bool ServiceBondOutput::has_price() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void BondServiceOutput::set_has_price() {
+inline void ServiceBondOutput::set_has_price() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void BondServiceOutput::clear_has_price() {
+inline void ServiceBondOutput::clear_has_price() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void BondServiceOutput::clear_price() {
+inline void ServiceBondOutput::clear_price() {
   price_ = 0;
   clear_has_price();
 }
-inline float BondServiceOutput::price() const {
-  // @@protoc_insertion_point(field_get:BondServiceOutput.price)
+inline float ServiceBondOutput::price() const {
+  // @@protoc_insertion_point(field_get:ServiceBondOutput.price)
   return price_;
 }
-inline void BondServiceOutput::set_price(float value) {
+inline void ServiceBondOutput::set_price(float value) {
   set_has_price();
   price_ = value;
-  // @@protoc_insertion_point(field_set:BondServiceOutput.price)
+  // @@protoc_insertion_point(field_set:ServiceBondOutput.price)
 }
 
 

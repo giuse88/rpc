@@ -31,18 +31,18 @@ void  protobuf_AddDesc_ServiceBondInput_2eproto();
 void protobuf_AssignDesc_ServiceBondInput_2eproto();
 void protobuf_ShutdownFile_ServiceBondInput_2eproto();
 
-class BondServiceInput;
+class ServiceBondInput;
 
 // ===================================================================
 
-class BondServiceInput : public ::google::protobuf::Message {
+class ServiceBondInput : public ::google::protobuf::Message {
  public:
-  BondServiceInput();
-  virtual ~BondServiceInput();
+  ServiceBondInput();
+  virtual ~ServiceBondInput();
 
-  BondServiceInput(const BondServiceInput& from);
+  ServiceBondInput(const ServiceBondInput& from);
 
-  inline BondServiceInput& operator=(const BondServiceInput& from) {
+  inline ServiceBondInput& operator=(const ServiceBondInput& from) {
     CopyFrom(from);
     return *this;
   }
@@ -56,17 +56,17 @@ class BondServiceInput : public ::google::protobuf::Message {
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const BondServiceInput& default_instance();
+  static const ServiceBondInput& default_instance();
 
-  void Swap(BondServiceInput* other);
+  void Swap(ServiceBondInput* other);
 
   // implements Message ----------------------------------------------
 
-  BondServiceInput* New() const;
+  ServiceBondInput* New() const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const BondServiceInput& from);
-  void MergeFrom(const BondServiceInput& from);
+  void CopyFrom(const ServiceBondInput& from);
+  void MergeFrom(const ServiceBondInput& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -128,7 +128,7 @@ class BondServiceInput : public ::google::protobuf::Message {
   inline float parvalue() const;
   inline void set_parvalue(float value);
 
-  // @@protoc_insertion_point(class_scope:BondServiceInput)
+  // @@protoc_insertion_point(class_scope:ServiceBondInput)
  private:
   inline void set_has_name();
   inline void clear_has_name();
@@ -155,68 +155,68 @@ class BondServiceInput : public ::google::protobuf::Message {
   friend void protobuf_ShutdownFile_ServiceBondInput_2eproto();
 
   void InitAsDefaultInstance();
-  static BondServiceInput* default_instance_;
+  static ServiceBondInput* default_instance_;
 };
 // ===================================================================
 
 
 // ===================================================================
 
-// BondServiceInput
+// ServiceBondInput
 
 // optional string name = 1;
-inline bool BondServiceInput::has_name() const {
+inline bool ServiceBondInput::has_name() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void BondServiceInput::set_has_name() {
+inline void ServiceBondInput::set_has_name() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void BondServiceInput::clear_has_name() {
+inline void ServiceBondInput::clear_has_name() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void BondServiceInput::clear_name() {
+inline void ServiceBondInput::clear_name() {
   if (name_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     name_->clear();
   }
   clear_has_name();
 }
-inline const ::std::string& BondServiceInput::name() const {
-  // @@protoc_insertion_point(field_get:BondServiceInput.name)
+inline const ::std::string& ServiceBondInput::name() const {
+  // @@protoc_insertion_point(field_get:ServiceBondInput.name)
   return *name_;
 }
-inline void BondServiceInput::set_name(const ::std::string& value) {
+inline void ServiceBondInput::set_name(const ::std::string& value) {
   set_has_name();
   if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     name_ = new ::std::string;
   }
   name_->assign(value);
-  // @@protoc_insertion_point(field_set:BondServiceInput.name)
+  // @@protoc_insertion_point(field_set:ServiceBondInput.name)
 }
-inline void BondServiceInput::set_name(const char* value) {
+inline void ServiceBondInput::set_name(const char* value) {
   set_has_name();
   if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     name_ = new ::std::string;
   }
   name_->assign(value);
-  // @@protoc_insertion_point(field_set_char:BondServiceInput.name)
+  // @@protoc_insertion_point(field_set_char:ServiceBondInput.name)
 }
-inline void BondServiceInput::set_name(const char* value, size_t size) {
+inline void ServiceBondInput::set_name(const char* value, size_t size) {
   set_has_name();
   if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     name_ = new ::std::string;
   }
   name_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:BondServiceInput.name)
+  // @@protoc_insertion_point(field_set_pointer:ServiceBondInput.name)
 }
-inline ::std::string* BondServiceInput::mutable_name() {
+inline ::std::string* ServiceBondInput::mutable_name() {
   set_has_name();
   if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     name_ = new ::std::string;
   }
-  // @@protoc_insertion_point(field_mutable:BondServiceInput.name)
+  // @@protoc_insertion_point(field_mutable:ServiceBondInput.name)
   return name_;
 }
-inline ::std::string* BondServiceInput::release_name() {
+inline ::std::string* ServiceBondInput::release_name() {
   clear_has_name();
   if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     return NULL;
@@ -226,7 +226,7 @@ inline ::std::string* BondServiceInput::release_name() {
     return temp;
   }
 }
-inline void BondServiceInput::set_allocated_name(::std::string* name) {
+inline void ServiceBondInput::set_allocated_name(::std::string* name) {
   if (name_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete name_;
   }
@@ -237,103 +237,103 @@ inline void BondServiceInput::set_allocated_name(::std::string* name) {
     clear_has_name();
     name_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  // @@protoc_insertion_point(field_set_allocated:BondServiceInput.name)
+  // @@protoc_insertion_point(field_set_allocated:ServiceBondInput.name)
 }
 
 // required float coupon = 2;
-inline bool BondServiceInput::has_coupon() const {
+inline bool ServiceBondInput::has_coupon() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void BondServiceInput::set_has_coupon() {
+inline void ServiceBondInput::set_has_coupon() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void BondServiceInput::clear_has_coupon() {
+inline void ServiceBondInput::clear_has_coupon() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void BondServiceInput::clear_coupon() {
+inline void ServiceBondInput::clear_coupon() {
   coupon_ = 0;
   clear_has_coupon();
 }
-inline float BondServiceInput::coupon() const {
-  // @@protoc_insertion_point(field_get:BondServiceInput.coupon)
+inline float ServiceBondInput::coupon() const {
+  // @@protoc_insertion_point(field_get:ServiceBondInput.coupon)
   return coupon_;
 }
-inline void BondServiceInput::set_coupon(float value) {
+inline void ServiceBondInput::set_coupon(float value) {
   set_has_coupon();
   coupon_ = value;
-  // @@protoc_insertion_point(field_set:BondServiceInput.coupon)
+  // @@protoc_insertion_point(field_set:ServiceBondInput.coupon)
 }
 
 // required int32 payments = 3;
-inline bool BondServiceInput::has_payments() const {
+inline bool ServiceBondInput::has_payments() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void BondServiceInput::set_has_payments() {
+inline void ServiceBondInput::set_has_payments() {
   _has_bits_[0] |= 0x00000004u;
 }
-inline void BondServiceInput::clear_has_payments() {
+inline void ServiceBondInput::clear_has_payments() {
   _has_bits_[0] &= ~0x00000004u;
 }
-inline void BondServiceInput::clear_payments() {
+inline void ServiceBondInput::clear_payments() {
   payments_ = 0;
   clear_has_payments();
 }
-inline ::google::protobuf::int32 BondServiceInput::payments() const {
-  // @@protoc_insertion_point(field_get:BondServiceInput.payments)
+inline ::google::protobuf::int32 ServiceBondInput::payments() const {
+  // @@protoc_insertion_point(field_get:ServiceBondInput.payments)
   return payments_;
 }
-inline void BondServiceInput::set_payments(::google::protobuf::int32 value) {
+inline void ServiceBondInput::set_payments(::google::protobuf::int32 value) {
   set_has_payments();
   payments_ = value;
-  // @@protoc_insertion_point(field_set:BondServiceInput.payments)
+  // @@protoc_insertion_point(field_set:ServiceBondInput.payments)
 }
 
 // required float interestRate = 4;
-inline bool BondServiceInput::has_interestrate() const {
+inline bool ServiceBondInput::has_interestrate() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void BondServiceInput::set_has_interestrate() {
+inline void ServiceBondInput::set_has_interestrate() {
   _has_bits_[0] |= 0x00000008u;
 }
-inline void BondServiceInput::clear_has_interestrate() {
+inline void ServiceBondInput::clear_has_interestrate() {
   _has_bits_[0] &= ~0x00000008u;
 }
-inline void BondServiceInput::clear_interestrate() {
+inline void ServiceBondInput::clear_interestrate() {
   interestrate_ = 0;
   clear_has_interestrate();
 }
-inline float BondServiceInput::interestrate() const {
-  // @@protoc_insertion_point(field_get:BondServiceInput.interestRate)
+inline float ServiceBondInput::interestrate() const {
+  // @@protoc_insertion_point(field_get:ServiceBondInput.interestRate)
   return interestrate_;
 }
-inline void BondServiceInput::set_interestrate(float value) {
+inline void ServiceBondInput::set_interestrate(float value) {
   set_has_interestrate();
   interestrate_ = value;
-  // @@protoc_insertion_point(field_set:BondServiceInput.interestRate)
+  // @@protoc_insertion_point(field_set:ServiceBondInput.interestRate)
 }
 
 // required float parValue = 5;
-inline bool BondServiceInput::has_parvalue() const {
+inline bool ServiceBondInput::has_parvalue() const {
   return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void BondServiceInput::set_has_parvalue() {
+inline void ServiceBondInput::set_has_parvalue() {
   _has_bits_[0] |= 0x00000010u;
 }
-inline void BondServiceInput::clear_has_parvalue() {
+inline void ServiceBondInput::clear_has_parvalue() {
   _has_bits_[0] &= ~0x00000010u;
 }
-inline void BondServiceInput::clear_parvalue() {
+inline void ServiceBondInput::clear_parvalue() {
   parvalue_ = 0;
   clear_has_parvalue();
 }
-inline float BondServiceInput::parvalue() const {
-  // @@protoc_insertion_point(field_get:BondServiceInput.parValue)
+inline float ServiceBondInput::parvalue() const {
+  // @@protoc_insertion_point(field_get:ServiceBondInput.parValue)
   return parvalue_;
 }
-inline void BondServiceInput::set_parvalue(float value) {
+inline void ServiceBondInput::set_parvalue(float value) {
   set_has_parvalue();
   parvalue_ = value;
-  // @@protoc_insertion_point(field_set:BondServiceInput.parValue)
+  // @@protoc_insertion_point(field_set:ServiceBondInput.parValue)
 }
 
 

@@ -18,9 +18,9 @@
 
 namespace {
 
-const ::google::protobuf::Descriptor* BondServiceInput_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* ServiceBondInput_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  BondServiceInput_reflection_ = NULL;
+  ServiceBondInput_reflection_ = NULL;
 
 }  // namespace
 
@@ -31,25 +31,25 @@ void protobuf_AssignDesc_ServiceBondInput_2eproto() {
     ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
       "ServiceBondInput.proto");
   GOOGLE_CHECK(file != NULL);
-  BondServiceInput_descriptor_ = file->message_type(0);
-  static const int BondServiceInput_offsets_[5] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BondServiceInput, name_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BondServiceInput, coupon_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BondServiceInput, payments_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BondServiceInput, interestrate_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BondServiceInput, parvalue_),
+  ServiceBondInput_descriptor_ = file->message_type(0);
+  static const int ServiceBondInput_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServiceBondInput, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServiceBondInput, coupon_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServiceBondInput, payments_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServiceBondInput, interestrate_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServiceBondInput, parvalue_),
   };
-  BondServiceInput_reflection_ =
+  ServiceBondInput_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
-      BondServiceInput_descriptor_,
-      BondServiceInput::default_instance_,
-      BondServiceInput_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BondServiceInput, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(BondServiceInput, _unknown_fields_),
+      ServiceBondInput_descriptor_,
+      ServiceBondInput::default_instance_,
+      ServiceBondInput_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServiceBondInput, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServiceBondInput, _unknown_fields_),
       -1,
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(BondServiceInput));
+      sizeof(ServiceBondInput));
 }
 
 namespace {
@@ -63,14 +63,14 @@ inline void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    BondServiceInput_descriptor_, &BondServiceInput::default_instance());
+    ServiceBondInput_descriptor_, &ServiceBondInput::default_instance());
 }
 
 }  // namespace
 
 void protobuf_ShutdownFile_ServiceBondInput_2eproto() {
-  delete BondServiceInput::default_instance_;
-  delete BondServiceInput_reflection_;
+  delete ServiceBondInput::default_instance_;
+  delete ServiceBondInput_reflection_;
 }
 
 void protobuf_AddDesc_ServiceBondInput_2eproto() {
@@ -80,14 +80,14 @@ void protobuf_AddDesc_ServiceBondInput_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\026ServiceBondInput.proto\"j\n\020BondServiceI"
+    "\n\026ServiceBondInput.proto\"j\n\020ServiceBondI"
     "nput\022\014\n\004name\030\001 \001(\t\022\016\n\006coupon\030\002 \002(\002\022\020\n\010pa"
     "yments\030\003 \002(\005\022\024\n\014interestRate\030\004 \002(\002\022\020\n\010pa"
     "rValue\030\005 \002(\002", 132);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ServiceBondInput.proto", &protobuf_RegisterTypes);
-  BondServiceInput::default_instance_ = new BondServiceInput();
-  BondServiceInput::default_instance_->InitAsDefaultInstance();
+  ServiceBondInput::default_instance_ = new ServiceBondInput();
+  ServiceBondInput::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_ServiceBondInput_2eproto);
 }
 
@@ -101,30 +101,30 @@ struct StaticDescriptorInitializer_ServiceBondInput_2eproto {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int BondServiceInput::kNameFieldNumber;
-const int BondServiceInput::kCouponFieldNumber;
-const int BondServiceInput::kPaymentsFieldNumber;
-const int BondServiceInput::kInterestRateFieldNumber;
-const int BondServiceInput::kParValueFieldNumber;
+const int ServiceBondInput::kNameFieldNumber;
+const int ServiceBondInput::kCouponFieldNumber;
+const int ServiceBondInput::kPaymentsFieldNumber;
+const int ServiceBondInput::kInterestRateFieldNumber;
+const int ServiceBondInput::kParValueFieldNumber;
 #endif  // !_MSC_VER
 
-BondServiceInput::BondServiceInput()
+ServiceBondInput::ServiceBondInput()
   : ::google::protobuf::Message() {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:BondServiceInput)
+  // @@protoc_insertion_point(constructor:ServiceBondInput)
 }
 
-void BondServiceInput::InitAsDefaultInstance() {
+void ServiceBondInput::InitAsDefaultInstance() {
 }
 
-BondServiceInput::BondServiceInput(const BondServiceInput& from)
+ServiceBondInput::ServiceBondInput(const ServiceBondInput& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:BondServiceInput)
+  // @@protoc_insertion_point(copy_constructor:ServiceBondInput)
 }
 
-void BondServiceInput::SharedCtor() {
+void ServiceBondInput::SharedCtor() {
   ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   name_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -135,12 +135,12 @@ void BondServiceInput::SharedCtor() {
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-BondServiceInput::~BondServiceInput() {
-  // @@protoc_insertion_point(destructor:BondServiceInput)
+ServiceBondInput::~ServiceBondInput() {
+  // @@protoc_insertion_point(destructor:ServiceBondInput)
   SharedDtor();
 }
 
-void BondServiceInput::SharedDtor() {
+void ServiceBondInput::SharedDtor() {
   if (name_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete name_;
   }
@@ -148,30 +148,30 @@ void BondServiceInput::SharedDtor() {
   }
 }
 
-void BondServiceInput::SetCachedSize(int size) const {
+void ServiceBondInput::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* BondServiceInput::descriptor() {
+const ::google::protobuf::Descriptor* ServiceBondInput::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return BondServiceInput_descriptor_;
+  return ServiceBondInput_descriptor_;
 }
 
-const BondServiceInput& BondServiceInput::default_instance() {
+const ServiceBondInput& ServiceBondInput::default_instance() {
   if (default_instance_ == NULL) protobuf_AddDesc_ServiceBondInput_2eproto();
   return *default_instance_;
 }
 
-BondServiceInput* BondServiceInput::default_instance_ = NULL;
+ServiceBondInput* ServiceBondInput::default_instance_ = NULL;
 
-BondServiceInput* BondServiceInput::New() const {
-  return new BondServiceInput;
+ServiceBondInput* ServiceBondInput::New() const {
+  return new ServiceBondInput;
 }
 
-void BondServiceInput::Clear() {
+void ServiceBondInput::Clear() {
 #define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
-  &reinterpret_cast<BondServiceInput*>(16)->f) - \
+  &reinterpret_cast<ServiceBondInput*>(16)->f) - \
    reinterpret_cast<char*>(16))
 
 #define ZR_(first, last) do {                              \
@@ -196,11 +196,11 @@ void BondServiceInput::Clear() {
   mutable_unknown_fields()->Clear();
 }
 
-bool BondServiceInput::MergePartialFromCodedStream(
+bool ServiceBondInput::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:BondServiceInput)
+  // @@protoc_insertion_point(parse_start:ServiceBondInput)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -296,17 +296,17 @@ bool BondServiceInput::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:BondServiceInput)
+  // @@protoc_insertion_point(parse_success:ServiceBondInput)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:BondServiceInput)
+  // @@protoc_insertion_point(parse_failure:ServiceBondInput)
   return false;
 #undef DO_
 }
 
-void BondServiceInput::SerializeWithCachedSizes(
+void ServiceBondInput::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:BondServiceInput)
+  // @@protoc_insertion_point(serialize_start:ServiceBondInput)
   // optional string name = 1;
   if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -341,12 +341,12 @@ void BondServiceInput::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:BondServiceInput)
+  // @@protoc_insertion_point(serialize_end:ServiceBondInput)
 }
 
-::google::protobuf::uint8* BondServiceInput::SerializeWithCachedSizesToArray(
+::google::protobuf::uint8* ServiceBondInput::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:BondServiceInput)
+  // @@protoc_insertion_point(serialize_to_array_start:ServiceBondInput)
   // optional string name = 1;
   if (has_name()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
@@ -382,11 +382,11 @@ void BondServiceInput::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:BondServiceInput)
+  // @@protoc_insertion_point(serialize_to_array_end:ServiceBondInput)
   return target;
 }
 
-int BondServiceInput::ByteSize() const {
+int ServiceBondInput::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -431,10 +431,10 @@ int BondServiceInput::ByteSize() const {
   return total_size;
 }
 
-void BondServiceInput::MergeFrom(const ::google::protobuf::Message& from) {
+void ServiceBondInput::MergeFrom(const ::google::protobuf::Message& from) {
   GOOGLE_CHECK_NE(&from, this);
-  const BondServiceInput* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const BondServiceInput*>(
+  const ServiceBondInput* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ServiceBondInput*>(
       &from);
   if (source == NULL) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
@@ -443,7 +443,7 @@ void BondServiceInput::MergeFrom(const ::google::protobuf::Message& from) {
   }
 }
 
-void BondServiceInput::MergeFrom(const BondServiceInput& from) {
+void ServiceBondInput::MergeFrom(const ServiceBondInput& from) {
   GOOGLE_CHECK_NE(&from, this);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_name()) {
@@ -465,25 +465,25 @@ void BondServiceInput::MergeFrom(const BondServiceInput& from) {
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void BondServiceInput::CopyFrom(const ::google::protobuf::Message& from) {
+void ServiceBondInput::CopyFrom(const ::google::protobuf::Message& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void BondServiceInput::CopyFrom(const BondServiceInput& from) {
+void ServiceBondInput::CopyFrom(const ServiceBondInput& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool BondServiceInput::IsInitialized() const {
+bool ServiceBondInput::IsInitialized() const {
   if ((_has_bits_[0] & 0x0000001e) != 0x0000001e) return false;
 
   return true;
 }
 
-void BondServiceInput::Swap(BondServiceInput* other) {
+void ServiceBondInput::Swap(ServiceBondInput* other) {
   if (other != this) {
     std::swap(name_, other->name_);
     std::swap(coupon_, other->coupon_);
@@ -496,11 +496,11 @@ void BondServiceInput::Swap(BondServiceInput* other) {
   }
 }
 
-::google::protobuf::Metadata BondServiceInput::GetMetadata() const {
+::google::protobuf::Metadata ServiceBondInput::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = BondServiceInput_descriptor_;
-  metadata.reflection = BondServiceInput_reflection_;
+  metadata.descriptor = ServiceBondInput_descriptor_;
+  metadata.reflection = ServiceBondInput_reflection_;
   return metadata;
 }
 
