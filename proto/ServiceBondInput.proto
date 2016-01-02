@@ -1,0 +1,7 @@
+message BondServiceInput {
+  optional string name=1;
+  required float coupon=2;
+  required int32 payments=3;
+  required float interestRate=4;
+  required float parValue=5;
+}
