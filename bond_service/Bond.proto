@@ -1,4 +1,4 @@
-message ServiceBondInput {
+message Bond {
   optional string name=1;
   required float coupon=2;
   required int32 payments=3;
