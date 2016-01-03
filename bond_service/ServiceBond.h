@@ -1,6 +1,9 @@
 #include <cmath>
 #include "ServiceBondInput.pb.h"
 #include "ServiceBondOutput.pb.h"
+#include "zmq.hpp"
+#include <string>
+#include <iostream>
 
 class Bond {
   public:
@@ -60,44 +63,48 @@ class BondPricerService final: public IBondPricerService {
     }
 };
 
-
 class BondPricerServiceProxy final: public IBondPricerService {
-    BondPrice reprice(Bond bond) {
+  private:
+    std::string uri;
+    zmq::socket_t* socket;
+  public:
 
-      // serializing request
+    BondPricerServiceProxy(std::string uri): uri(uri) {
+    }
+
+    BondPrice reprice(Bond bond) {
+      zmq::context_t context (1);
+      this->socket = new zmq::socket_t(context, ZMQ_REQ);
+      //std::cout << "Connecting to bond price server…" << std::endl;
+      this->socket->connect(uri);
+      //std::cout << "Connected" << std::endl;
+
       ServiceBondInput in;
       in.set_name(bond.name);
       in.set_coupon(bond.coupon);
       in.set_payments(bond.payments);
       in.set_interestrate(bond.interestRate);
+      in.set_parvalue(bond.parValue);
 
-      // send
+      std::string str;
+      in.SerializeToString(&str);
+      int sz = str.length();
+      //std::cout << str << sz << std::endl;
+      zmq::message_t msg(sz);
+      memcpy(msg.data(), str.c_str(), sz);
+      //std::cout << std::string(static_cast<char*>(msg.data()), msg.size()) << std::endl;
+      this->socket->send(msg);
 
-      // deserializing response
-      ServiceBondOutput out;
-      return BondPrice(out.price());
-    }
-};
+      zmq::message_t reply;
+      this->socket->recv(&reply);
+      //std::cout << std::string(static_cast<char*>(reply.data()), reply.size()) << std::endl;
+      this->socket->close();
 
-class BondPriceRemoteService  {
-  private:
-    BondPricerService service;
-
-  public:
-    ServiceBondOutput priceRequest(ServiceBondInput in) {
-      // deserialize
-      Bond bond;
-      bond.name = in.name();
-      bond.coupon = in.coupon();
-      bond.payments = in.payments();
-      bond.interestRate = in.interestrate();
-
-      // call real serivce
-      BondPrice bondPrice = service.reprice(bond);
-
-      // serialize response
-      ServiceBondOutput out;
-      out.set_price(bondPrice.price);
-      return out;
+      // deserialization
+      ServiceBondOutput out = ServiceBondOutput();
+      out.ParseFromArray(reply.data(), reply.size());
+      BondPrice bondPrice = BondPrice(out.price());
+      //std::cout << bondPrice << std::endl;
+      return bondPrice;
     }
 };
