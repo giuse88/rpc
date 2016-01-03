@@ -15,29 +15,18 @@ class BondPriceRemoteService: public IRemoteService {
   public:
     zmq::message_t processRequest(const zmq::message_t& req) {
       // deserialization
-      ServiceBondInput in = ServiceBondInput();
-      in.ParseFromArray(req.data(), req.size());
-      google::protobuf::TextFormat::Printer p;
-  //    std::string s;
-  //    p.PrintToString(in, &s);
-  //    cout << "Received " << s << endl;
-      Bond bond;
-      bond.name = in.name();
-      bond.coupon = in.coupon();
-      bond.payments = in.payments();
-      bond.interestRate = in.interestrate();
-      bond.parValue = in.parvalue();
+      Bond bond = Bond();
+      bond.ParseFromArray(req.data(), req.size());
 
       // call real serivce
-      std::cout << "Processing bond " << bond << std::endl;
+//      std::cout << "Processing bond " << bond << std::endl;
       BondPrice bondPrice = service.reprice(bond);
-      std::cout << "Bond price " << bondPrice << std::endl;
+//      std::cout << "Bond price " << bondPrice << std::endl;
 
       // serializion of the response
-      ServiceBondOutput out;
-      out.set_price(bondPrice.price);
+
       std::string str;
-      out.SerializeToString(&str);
+      bondPrice.SerializeToString(&str);
       int sz = str.length();
       zmq::message_t response(sz);
       memcpy(response.data(), str.c_str(), sz);
