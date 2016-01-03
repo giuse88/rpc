@@ -1,3 +1,6 @@
+#ifndef __BOND_PRICE_SERVICE_H__
+#define __BOND_PRICE_SERVICE_H__
+
 #include <cmath>
 #include "ServiceBondInput.pb.h"
 #include "ServiceBondOutput.pb.h"
@@ -108,3 +111,5 @@ class BondPricerServiceProxy final: public IBondPricerService {
       return bondPrice;
     }
 };
+
+#endif
